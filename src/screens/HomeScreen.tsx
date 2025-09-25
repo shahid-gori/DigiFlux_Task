@@ -16,7 +16,7 @@ type Product = {
 };
 
 const HomeScreen = () => {
-  const username = useSelector((state: any) => state.auth.user?.mobile);
+  const username = useSelector((state: any) => state.auth.user?.username);
   const products: Product[] = useSelector((state: any) => state.products.list);
   //   console.log(products)
   const [search, setSearch] = useState('');
