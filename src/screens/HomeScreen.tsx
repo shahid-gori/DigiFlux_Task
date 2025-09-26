@@ -16,7 +16,8 @@ type Product = {
 };
 
 const HomeScreen = () => {
-  const username = useSelector((state: any) => state.auth.user?.username);
+  const username = useSelector((state: any) => state.auth.user?.userName);
+  //   console.log(username);
   const products: Product[] = useSelector((state: any) => state.products.list);
   //   console.log(products)
   const [search, setSearch] = useState('');
@@ -25,7 +26,7 @@ const HomeScreen = () => {
     item?.title.toLowerCase().includes(search.toLowerCase()),
   );
 
-// console.log(filteredProducts)
+  // console.log(filteredProducts)
 
   const scrollY = useSharedValue(0);
 
